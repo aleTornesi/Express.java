@@ -2,6 +2,7 @@ package org.express.router.PathConverter;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
+import java.util.NoSuchElementException;
 
 
 public class Lexer implements Iterator<LexToken> {
@@ -61,6 +62,9 @@ public class Lexer implements Iterator<LexToken> {
 
     @Override
     public LexToken next() {
+        if (!this.hasNext()) {
+            throw new NoSuchElementException();
+        }
         if(this.index == this.chars.length) {
             return new LexToken("END", this.index++, "");
         }

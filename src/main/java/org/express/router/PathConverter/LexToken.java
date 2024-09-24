@@ -2,10 +2,10 @@ package org.express.router.PathConverter;
 
 import java.util.Objects;
 
-class LexToken {
-    private final String type;
-    private final int index;
-    private final String value;
+public class LexToken {
+    public final String type;
+    public final int index;
+    public final String value;
 
     public LexToken(String type, int index, String value) {
         if (!isValidType(Objects.requireNonNull(type))) {
