@@ -6,4 +6,8 @@ public final class Wildcard implements Token, Key {
     public Wildcard(String value) {
         this.value = value;
     }
+
+    public String getType() {
+        return "wildcard";
+    }
 }

@@ -6,4 +6,8 @@ public final class Parameter implements Token, Key {
     public Parameter(String value) {
         this.value = value;
     }
+
+    public String getType() {
+        return "param";
+    }
 }

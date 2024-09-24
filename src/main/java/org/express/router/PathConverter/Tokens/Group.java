@@ -9,4 +9,8 @@ public final class Group implements Token {
     public Group(List<Token> tokens) {
         this.tokens = Collections.unmodifiableList(tokens);
     }
+
+    public String getType() {
+        return "group";
+    }
 }

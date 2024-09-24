@@ -6,4 +6,8 @@ public final class Text implements Token {
     public Text(String value) {
         this.value = value;
     }
+
+    public String getType() {
+        return "text";
+    }
 }
